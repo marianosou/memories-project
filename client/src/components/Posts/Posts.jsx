@@ -1,14 +1,14 @@
 import React from "react";
-import Post from "../Posts/"
+import Post from "../Posts/Post/Post";
 
 const Posts = () => {
-	return 
-    <>
+	return (
+		<>
 			<h1>Posts</h1>
 			<Post />
 			<Post />
-		</>;
-    
+		</>
+	);
 };
 
 export default Posts;
