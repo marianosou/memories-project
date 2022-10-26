@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useStyles from "./styles";
-import { Textfield, Button, Typography, Paper } from "@material-ui/core";
+import { TextField, Button, Typography, Paper } from "@material-ui/core";
 
 const Form = () => {
 	const [postData, setPostData] = useState({
@@ -21,14 +21,14 @@ const Form = () => {
 
 	return (
 		<Paper className={classes.paper}>
-			<Form
+			 <form
 				autcomplete="off"
 				noValidate
 				className={classes.form}
 				onSubmit={handleSubmit}
-			>
+			> 
 				<Typography variant="h6">Creating a Memory</Typography>
-				<textField
+				<TextField
 					name="creator"
 					variant="outlined"
 					label="Creator"
@@ -36,7 +36,7 @@ const Form = () => {
 					value={postData.creator}
 					onChange={handleChange}
 				/>
-				<textField
+				<TextField
 					name="title"
 					variant="outlined"
 					label="Title"
@@ -44,7 +44,7 @@ const Form = () => {
 					value={postData.title}
 					onChange={handleChange}
 				/>
-				<textField
+				<TextField
 					name="message"
 					variant="outlined"
 					label="Message"
@@ -52,7 +52,7 @@ const Form = () => {
 					value={postData.message}
 					onChange={handleChange}
 				/>
-				<textField
+				<TextField
 					name="tags"
 					variant="outlined"
 					label="Tags"
@@ -60,7 +60,7 @@ const Form = () => {
 					value={postData.tags}
 					onChange={handleChange}
 				/>
-			</Form>
+			</form>
 		</Paper>
 	);
 };
